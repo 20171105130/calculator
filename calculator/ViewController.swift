@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var sym = 0
     var sum1:Double = 0
     var judge = 0
+    var judge1 = 0
     var decimalPointFlag: Bool = false
     var decimalPointFlag1: Bool = false
    
@@ -26,73 +27,93 @@ class ViewController: UIViewController {
     @IBAction func number1(_ sender: Any){
         if  sym == -1 || sym == -2 || sym == -3 || sym == -4 {
             rulst1.text = rulst1.text! + "1"
+            decimalPointFlag = true
         }else{
             rulst.text = rulst.text! + "1"
+            decimalPointFlag1 = true
         }
     }
     @IBAction func number2(_ sender: Any){
         if  sym == -1 || sym == -2 || sym == -3 || sym == -4 {
             rulst1.text = rulst1.text! + "2"
+             decimalPointFlag = true
         }else{
             rulst.text = rulst.text! + "2"
+             decimalPointFlag1 = true
         }
     }
     @IBAction func number3(_ sender: Any)
     {
         if  sym == -1 || sym == -2 || sym == -3 || sym == -4 {
             rulst1.text = rulst1.text! + "3"
+             decimalPointFlag = true
         }else{
             rulst.text = rulst.text! + "3"
+             decimalPointFlag1 = true
         }
     }
     @IBAction func number4(_ sender: Any){
         if  sym == -1 || sym == -2 || sym == -3 || sym == -4 {
             rulst1.text = rulst1.text! + "4"
+             decimalPointFlag = true
         }else{
             rulst.text = rulst.text! + "4"
+             decimalPointFlag1 = true
         }
     }
     @IBAction func number5(_ sender: Any){
         if  sym == -1 || sym == -2 || sym == -3 || sym == -4 {
             rulst1.text = rulst1.text! + "5"
+             decimalPointFlag = true
         }else{
             rulst.text = rulst.text! + "5"
+             decimalPointFlag1 = true
         }
     }
     @IBAction func number6(_ sender: Any)
     {
         if  sym == -1 || sym == -2 || sym == -3 || sym == -4 {
             rulst1.text = rulst1.text! + "6"
+             decimalPointFlag = true
         }else{
             rulst.text = rulst.text! + "6"
+             decimalPointFlag1 = true
         }
     }
     @IBAction func number7(_ sender: Any){
         if  sym == -1 || sym == -2 || sym == -3 || sym == -4 {
             rulst1.text = rulst1.text! + "7"
+             decimalPointFlag = true
         }else{
             rulst.text = rulst.text! + "7"
+             decimalPointFlag1 = true
         }
     }
     @IBAction func number8(_ sender: Any){
         if  sym == -1 || sym == -2 || sym == -3 || sym == -4 {
             rulst1.text = rulst1.text! + "8"
+             decimalPointFlag = true
         }else{
             rulst.text = rulst.text! + "8"
+             decimalPointFlag1 = true
         }
     }
     @IBAction func number9(_ sender: Any){
         if  sym == -1 || sym == -2 || sym == -3 || sym == -4 {
             rulst1.text = rulst1.text! + "9"
+             decimalPointFlag = true
         }else{
             rulst.text = rulst.text! + "9"
+             decimalPointFlag1 = true
         }
     }
     @IBAction func number0(_ sender: Any){
         if  sym == -1 || sym == -2 || sym == -3 || sym == -4 {
             rulst1.text = rulst1.text! + "0"
+             decimalPointFlag = true
         }else{
             rulst.text = rulst.text! + "0"
+             decimalPointFlag1 = true
         }
     }
     override func viewDidLoad() {
@@ -109,25 +130,25 @@ class ViewController: UIViewController {
         sym = -1
         symbol.text = "+"
         decimalPointFlag = !decimalPointFlag
-        decimalPointFlag1 = !decimalPointFlag1
+        
     }
     @IBAction func less(_ sender: Any){
          sym = -2
         symbol.text = "-"
          decimalPointFlag = !decimalPointFlag
-        decimalPointFlag1 = !decimalPointFlag1
+       
     }
     @IBAction func multiply(_ sender: Any){
          sym = -3
         symbol.text = "×"
         decimalPointFlag = !decimalPointFlag
-        decimalPointFlag1 = !decimalPointFlag1
+       
     }
     @IBAction func except(_ sender: Any){
          sym = -4
         symbol.text = "÷"
         decimalPointFlag = !decimalPointFlag
-        decimalPointFlag1 = !decimalPointFlag1
+        
     }
     @IBAction func sum(_ sender: Any){
         temp1 = Double(rulst.text!)!
@@ -154,19 +175,22 @@ class ViewController: UIViewController {
         rulst3.text = ""
         temp1 = 0
         temp2 = 0
-        //decimalPointFlag = !decimalPointFlag
+        judge = 0
+        judge1 = 0
+        decimalPointFlag = !decimalPointFlag
+         decimalPointFlag1 = !decimalPointFlag1
         
     }
     @IBAction func dot(_ sender: Any) {
-        if rulst1.text != ""{
+        /*if rulst1.text != ""{
             judge = 1
             decimalPointFlag = false
-        }
-        if !decimalPointFlag
-        {
-            rulst.text = rulst.text! + "."
-            decimalPointFlag = !decimalPointFlag
-        }
+        }*/
+        //if !decimalPointFlag
+        //{
+         //   rulst.text = rulst.text! + "."
+         //   decimalPointFlag = !decimalPointFlag
+        //}
         
         /*if !decimalPointFlag1
         {
@@ -192,8 +216,23 @@ class ViewController: UIViewController {
             
             decimalPointFlag = !decimalPointFlag
         }*/
-       
-    
+        //if judge == 1 {
+       //   return
+            
+            
+       //}
+        if decimalPointFlag == true {
+           
+                rulst1.text = rulst1.text! + "."
+            decimalPointFlag = !decimalPointFlag
+        }
+        if  decimalPointFlag1 == true {
+            
+                rulst.text = rulst.text! + "."
+            decimalPointFlag1 = !decimalPointFlag1
+            
+        }
+        
         
         
     }
