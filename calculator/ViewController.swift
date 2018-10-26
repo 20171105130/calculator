@@ -29,15 +29,18 @@ class ViewController: UIViewController {
         
             //rulst.text = rulst.text! + "1"
             //decimalPointFlag1 = true
-       
+        /*if rulst.text = "0"{
+            rulst.text = ""
+            
+        }*/
         rulst.text = rulst.text! + "1"
         if verify
         {
-            temp1 = NSString(string: rulst.text!).doubleValue
+            temp2 = NSString(string: rulst.text!).doubleValue
         }
         else
         {
-            temp2 = NSString(string: rulst.text!).doubleValue
+            temp1 = NSString(string: rulst.text!).doubleValue
         }
     }
     @IBAction func number2(_ sender: Any){
@@ -45,11 +48,11 @@ class ViewController: UIViewController {
         rulst.text = rulst.text! + "2"
         if verify
         {
-            temp1 = NSString(string: rulst.text!).doubleValue
+            temp2 = NSString(string: rulst.text!).doubleValue
         }
         else
         {
-            temp2 = NSString(string: rulst.text!).doubleValue
+            temp1 = NSString(string: rulst.text!).doubleValue
         }
     }
 
@@ -59,11 +62,11 @@ class ViewController: UIViewController {
             rulst.text = rulst.text! + "3"
         if verify
         {
-            temp1 = NSString(string: rulst.text!).doubleValue
+            temp2 = NSString(string: rulst.text!).doubleValue
         }
         else
         {
-            temp2 = NSString(string: rulst.text!).doubleValue
+            temp1 = NSString(string: rulst.text!).doubleValue
         }
     }
     @IBAction func number4(_ sender: Any){
@@ -71,11 +74,11 @@ class ViewController: UIViewController {
             rulst.text = rulst.text! + "4"
         if verify
         {
-            temp1 = NSString(string: rulst.text!).doubleValue
+            temp2 = NSString(string: rulst.text!).doubleValue
         }
         else
         {
-            temp2 = NSString(string: rulst.text!).doubleValue
+            temp1 = NSString(string: rulst.text!).doubleValue
         }
     }
     @IBAction func number5(_ sender: Any){
@@ -83,11 +86,11 @@ class ViewController: UIViewController {
     rulst.text = rulst.text! + "5"
         if verify
         {
-            temp1 = NSString(string: rulst.text!).doubleValue
+            temp2 = NSString(string: rulst.text!).doubleValue
         }
         else
         {
-            temp2 = NSString(string: rulst.text!).doubleValue
+            temp1 = NSString(string: rulst.text!).doubleValue
         }
     }
     @IBAction func number6(_ sender: Any)
@@ -96,11 +99,11 @@ class ViewController: UIViewController {
             rulst.text = rulst.text! + "6"
         if verify
         {
-            temp1 = NSString(string: rulst.text!).doubleValue
+            temp2 = NSString(string: rulst.text!).doubleValue
         }
         else
         {
-            temp2 = NSString(string: rulst.text!).doubleValue
+            temp1 = NSString(string: rulst.text!).doubleValue
         }
     }
     @IBAction func number7(_ sender: Any){
@@ -108,11 +111,11 @@ class ViewController: UIViewController {
             rulst.text = rulst.text! + "7"
         if verify
         {
-            temp1 = NSString(string: rulst.text!).doubleValue
+            temp2 = NSString(string: rulst.text!).doubleValue
         }
         else
         {
-            temp2 = NSString(string: rulst.text!).doubleValue
+            temp1 = NSString(string: rulst.text!).doubleValue
         }
     }
     @IBAction func number8(_ sender: Any){
@@ -120,11 +123,11 @@ class ViewController: UIViewController {
             rulst.text = rulst.text! + "8"
         if verify
         {
-            temp1 = NSString(string: rulst.text!).doubleValue
+            temp2 = NSString(string: rulst.text!).doubleValue
         }
         else
         {
-            temp2 = NSString(string: rulst.text!).doubleValue
+            temp1 = NSString(string: rulst.text!).doubleValue
         }
         
     }
@@ -133,11 +136,11 @@ class ViewController: UIViewController {
             rulst.text = rulst.text! + "9"
         if verify
         {
-            temp1 = NSString(string: rulst.text!).doubleValue
+            temp2 = NSString(string: rulst.text!).doubleValue
         }
         else
         {
-            temp2 = NSString(string: rulst.text!).doubleValue
+            temp1 = NSString(string: rulst.text!).doubleValue
         }
     }
     @IBAction func number0(_ sender: Any){
@@ -145,15 +148,16 @@ class ViewController: UIViewController {
             rulst.text = rulst.text! + "0"
         if verify
         {
-            temp1 = NSString(string: rulst.text!).doubleValue
+            temp2 = NSString(string: rulst.text!).doubleValue
         }
         else
         {
-            temp2 = NSString(string: rulst.text!).doubleValue
+            temp1 = NSString(string: rulst.text!).doubleValue
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        //rulst.text = "0"
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -163,44 +167,50 @@ class ViewController: UIViewController {
     }
     
     @IBAction func add(_ sender: Any){
-        //sym = -1
+        sym = -1
         //rulst.text = "+"
         //temp1 = Double(rulst.text!)!
         rulst.text = rulst.text! + "+"
         verify = true
-        sum1 = temp1 + temp2
+        
+        //sum1 = temp1 + temp2
+        //temp1 = sum1
+        rulst.text = ""
         //sum1 = temp1 + temp2
         //decimalPointFlag = !decimalPointFlag
         
     }
     @IBAction func less(_ sender: Any){
-        //sym = -2
+        sym = -2
         rulst.text = rulst.text! + "-"
-        sum1  = temp1 + temp2
+        //sum1  = temp1 + temp2
          //decimalPointFlag = !decimalPointFlag
+         rulst.text = ""
         verify = true
        
     }
     @IBAction func multiply(_ sender: Any){
-        //sym = -3
+        sym = -3
          rulst.text = rulst.text! + "×"
-        sum1  = temp1 * temp2
+        //sum1  = temp1 * temp2
        // decimalPointFlag = !decimalPointFlag
+         rulst.text = ""
         verify = true
        
     }
     @IBAction func except(_ sender: Any){
-        //sym = -4
+        sym = -4
          rulst.text = rulst.text! + "÷"
-         sum1  = temp1 / temp2
+         //sum1  = temp1 / temp2
         //decimalPointFlag = !decimalPointFlag
+         rulst.text = ""
         verify = true
         
     }
     @IBAction func sum(_ sender: Any){
         //temp1 = Double(rulst.text!)!
         //temp2 = Double(rulst1.text!)!
-        /*if sym == -1{
+        if sym == -1{
             
              sum1 = temp1 + temp2
         }
@@ -212,11 +222,12 @@ class ViewController: UIViewController {
         }
         if sym == -4 {
             sum1  = temp1 / temp2
-        }*/
+        }
         //rulst3.text = "\(sum1)"*/
         
         rulst1.text = sum1.description//"\(sum1)"
-        //sym = 0
+        verify = false
+        sym = 0
     }
     @IBAction func Clear(_ sender: Any) {
         rulst.text = ""
@@ -228,7 +239,7 @@ class ViewController: UIViewController {
         //judge = 0
         //judge1 = 0
         verify = false
-        //decimalPointFlag = !decimalPointFlag
+        decimalPointFlag = !decimalPointFlag
          //decimalPointFlag1 = !decimalPointFlag1
         
     }
@@ -292,6 +303,9 @@ class ViewController: UIViewController {
         if !decimalPointFlag
         {
            rulst.text = rulst.text!+"."
+            //if rulst.text!.contains(".") {
+            //    print("字符串包含.")
+           // }
            decimalPointFlag = !decimalPointFlag
         }
         
@@ -299,8 +313,8 @@ class ViewController: UIViewController {
     
     @IBAction func square(_ sender: Any) {
         
-        rulst.text = rulst.text! + "^"
-        sum1  = pow(temp1 , temp2)
+        //rulst.text = rulst.text! + "^"
+        //sum1  = pow(temp1 , temp2)
         //decimalPointFlag = !decimalPointFlag
         verify = true
         
