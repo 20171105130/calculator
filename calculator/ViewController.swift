@@ -306,12 +306,13 @@ class ViewController: UIViewController {
         {
             decimalPointFlag = false
         }
+        if rulst.text!.contains(".") {
+            decimalPointFlag = true
+           print("字符串包含.")
+        }
         if !decimalPointFlag
         {
            rulst.text = rulst.text!+"."
-            //if rulst.text!.contains(".") {
-            //    print("字符串包含.")
-           // }
            decimalPointFlag = !decimalPointFlag
         }
         
@@ -334,7 +335,18 @@ class ViewController: UIViewController {
         verify = true
     }
     
-
+    @IBAction func he(_ sender: Any) {
+        sym = -7
+        if sym == 0{
+            temp1 = temp1 * 0.01
+        }else{
+            temp2 = temp2 * 0.01
+        }
+        //sum1  = pow(temp1 , temp2)
+        //decimalPointFlag = !decimalPointFlag
+        verify = true
+    }
+    
 
 
 

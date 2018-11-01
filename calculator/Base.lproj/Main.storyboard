@@ -150,6 +150,9 @@
                                 <rect key="frame" x="108" y="545" width="90" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="%"/>
+                                <connections>
+                                    <action selector="he:" destination="BYZ-38-t0r" eventType="touchUpInside" id="acL-5I-2gM"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KtP-dp-ZTt">
                                 <rect key="frame" x="99" y="136" width="252" height="30"/>
