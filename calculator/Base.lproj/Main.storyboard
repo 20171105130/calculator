@@ -180,6 +180,9 @@
                                 <rect key="frame" x="108" y="603" width="90" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="√"/>
+                                <connections>
+                                    <action selector="rooting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pgx-1U-2fw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ida-j1-0Ob">
                                 <rect key="frame" x="206" y="604" width="78" height="63"/>

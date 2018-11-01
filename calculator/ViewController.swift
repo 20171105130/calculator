@@ -223,6 +223,12 @@ class ViewController: UIViewController {
         if sym == -4 {
             sum1  = temp1 / temp2
         }
+        if sym == -5 {
+            sum1  = pow(temp1 , temp2)
+        }
+        if sym == -6 {
+            sum1  = sqrt(temp1)
+        }
         //rulst3.text = "\(sum1)"*/
         
         rulst1.text = sum1.description//"\(sum1)"
@@ -312,15 +318,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func square(_ sender: Any) {
-        
-        //rulst.text = rulst.text! + "^"
+        sym = -5
+        rulst.text = rulst.text! + "^"
         //sum1  = pow(temp1 , temp2)
         //decimalPointFlag = !decimalPointFlag
         verify = true
         
     }
     
-
+    @IBAction func rooting(_ sender: Any) {
+        sym = -6
+        rulst.text = rulst.text! + "√"
+        //sum1  = pow(temp1 , temp2)
+        //decimalPointFlag = !decimalPointFlag
+        verify = true
+    }
+    
 
 
 
