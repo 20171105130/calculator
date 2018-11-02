@@ -12,13 +12,14 @@ class ViewController: UIViewController {
     var temp1:Double = 0
     var temp2:Double = 0
     var sym = 0
+    var sym1 = 0
     var sum1:Double = 0
-    var judge = 0
+    var judge:Double = 0
     var judge1 = 0
     var verify: Bool = false
     var decimalPointFlag: Bool = false
     var decimalPointFlag1: Bool = false
-   
+    
     
     @IBOutlet weak var rulst: UITextField!
    // @IBOutlet weak var symbol: UITextField!
@@ -173,11 +174,20 @@ class ViewController: UIViewController {
         rulst.text = rulst.text! + "+"
         verify = true
         
+        
+        sum1 = temp1 + temp2
+        //rulst1.text = sum1.description//"\(sum1)"
+        
         //sum1 = temp1 + temp2
         //temp1 = sum1
         rulst.text = ""
         //sum1 = temp1 + temp2
         //decimalPointFlag = !decimalPointFlag
+        //while verify {
+        //    sym1 = 1
+       // }
+        
+        print(sym1)
         
     }
     @IBAction func less(_ sender: Any){
@@ -321,6 +331,7 @@ class ViewController: UIViewController {
     @IBAction func square(_ sender: Any) {
         sym = -5
         rulst.text = rulst.text! + "^"
+        rulst.text = ""
         //sum1  = pow(temp1 , temp2)
         //decimalPointFlag = !decimalPointFlag
         verify = true
@@ -330,6 +341,7 @@ class ViewController: UIViewController {
     @IBAction func rooting(_ sender: Any) {
         sym = -6
         rulst.text = rulst.text! + "√"
+        rulst.text = ""
         //sum1  = pow(temp1 , temp2)
         //decimalPointFlag = !decimalPointFlag
         verify = true
@@ -342,17 +354,12 @@ class ViewController: UIViewController {
         }else{
             temp2 = temp2 * 0.01
         }
+        rulst.text = ""
         //sum1  = pow(temp1 , temp2)
         //decimalPointFlag = !decimalPointFlag
         verify = true
     }
     
-
-    @IBAction func A(_ sender: Any) {
-    }
-    
-
-
 
 }
 
