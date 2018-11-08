@@ -173,9 +173,18 @@ class ViewController: UIViewController {
         //temp1 = Double(rulst.text!)!
         rulst.text = rulst.text! + "+"
         verify = true
+        if sum1 != 0 {
+            judge = -1
+        }
+        if judge == -1 {
+            sum1 = temp1 + temp2
+            temp1 = sum1
+            temp2 = 0
+            
+        }
         
         
-        sum1 = temp1 + temp2
+        
         //rulst1.text = sum1.description//"\(sum1)"
         
         //sum1 = temp1 + temp2
@@ -186,8 +195,8 @@ class ViewController: UIViewController {
         //while verify {
         //    sym1 = 1
        // }
-        
-        print(sym1)
+        //rulst1.text = temp1.description//"\(sum1)"
+        //print(sym1)
         
     }
     @IBAction func less(_ sender: Any){
@@ -195,8 +204,19 @@ class ViewController: UIViewController {
         rulst.text = rulst.text! + "-"
         //sum1  = temp1 + temp2
          //decimalPointFlag = !decimalPointFlag
-         rulst.text = ""
+      
+        
         verify = true
+        if sum1 != 0 {
+            judge = -1
+        }
+        if judge == -1 {
+            sum1 = temp1 - temp2
+            temp1 = sum1
+            temp2 = 0
+            
+        }
+        rulst.text = ""
        
     }
     @IBAction func multiply(_ sender: Any){
@@ -204,17 +224,39 @@ class ViewController: UIViewController {
          rulst.text = rulst.text! + "×"
         //sum1  = temp1 * temp2
        // decimalPointFlag = !decimalPointFlag
-         rulst.text = ""
+        
+        
         verify = true
-       
+        if sum1 != 0 {
+            judge = -1
+        }
+        if judge == -1 {
+            sum1 = temp1 * temp2
+            temp1 = sum1
+            temp2 = 0
+            
+        }
+        rulst.text = ""
+        
     }
     @IBAction func except(_ sender: Any){
         sym = -4
          rulst.text = rulst.text! + "÷"
          //sum1  = temp1 / temp2
         //decimalPointFlag = !decimalPointFlag
-         rulst.text = ""
+       
+        
         verify = true
+        if sum1 != 0 {
+            judge = -1
+        }
+        if judge == -1 {
+            sum1 = temp1 / temp2
+            temp1 = sum1
+            temp2 = 0
+            
+        }
+        rulst.text = ""
         
     }
     @IBAction func sum(_ sender: Any){
@@ -260,65 +302,14 @@ class ViewController: UIViewController {
         
     }
     @IBAction func dot(_ sender: Any) {
-        /*if rulst1.text != ""{
-            judge = 1
-            decimalPointFlag = false
-        }*/
-        //if !decimalPointFlag
-        //{
-         //   rulst.text = rulst.text! + "."
-         //   decimalPointFlag = !decimalPointFlag
-        //}
         
-        /*if !decimalPointFlag1
-        {
-            rulst.text = rulst.text! + "."
-            decimalPointFlag1 = !decimalPointFlag1
-        }*/
-
-        
-        /*if !decimalPointFlag {
-            if  sym == -1 || sym == -2 || sym == -3 || sym == -4 {
-                rulst1.text = rulst1.text! + "."
-                
-            }
-            if rulst.text != "" && symbol.text != ""{
-                rulst.text = rulst.text! + "."
-                judge = 1
-            }
-            /*if isSecond {
-                secondOperand = (lableResult.text! as NSString).doubleValue
-            }else {
-                firstOperand = (lableResult.text! as NSString).doubleValue
-            }*/
-            
-            decimalPointFlag = !decimalPointFlag
-        }*/
-        //if judge == 1 {
-       //   return
-            
-            
-       //}
-        
-        /*
-        if decimalPointFlag == true {
-           
-                rulst1.text = rulst1.text! + "."
-            decimalPointFlag = !decimalPointFlag
-        }
-        if  decimalPointFlag1 == true {
-            
-                rulst.text = rulst.text! + "."
-            decimalPointFlag1 = !decimalPointFlag1
-            
-        }*/
         if verify
         {
             decimalPointFlag = false
         }
         if rulst.text!.contains(".") {
             decimalPointFlag = true
-           print("字符串包含.")
+           print("字符串包含." )
         }
         if !decimalPointFlag
         {
@@ -347,7 +338,8 @@ class ViewController: UIViewController {
         verify = true
     }
     
-    @IBAction func he(_ sender: Any) {
+    
+    @IBAction func percent(_ sender: Any) {
         sym = -7
         if sym == 0{
             temp1 = temp1 * 0.01

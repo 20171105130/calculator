@@ -151,7 +151,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="%"/>
                                 <connections>
-                                    <action selector="he:" destination="BYZ-38-t0r" eventType="touchUpInside" id="acL-5I-2gM"/>
+                                    <action selector="percent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XqR-S9-4xQ"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KtP-dp-ZTt">
