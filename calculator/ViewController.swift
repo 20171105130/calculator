@@ -227,13 +227,15 @@ class ViewController: UIViewController {
         
         
         verify = true
+        sum1 = temp1 * temp2
         if sum1 != 0 {
             judge = -1
         }
         if judge == -1 {
-            sum1 = temp1 * temp2
-            temp1 = sum1
+            
+                         temp1 = sum1
             temp2 = 0
+            //rulst1.text = temp1.description
             
         }
         rulst.text = ""
@@ -251,6 +253,10 @@ class ViewController: UIViewController {
             judge = -1
         }
         if judge == -1 {
+            if temp2 == 0 {
+                rulst1.text = "chuzuo"
+                
+            }
             sum1 = temp1 / temp2
             temp1 = sum1
             temp2 = 0
@@ -295,7 +301,9 @@ class ViewController: UIViewController {
         temp1 = 0
         temp2 = 0
         //judge = 0
-        //judge1 = 0
+        sym = 0
+        judge1 = 0
+        sum1 = 0
         verify = false
         decimalPointFlag = !decimalPointFlag
          //decimalPointFlag1 = !decimalPointFlag1
