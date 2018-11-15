@@ -233,7 +233,7 @@ class ViewController: UIViewController {
         }
         if judge == -1 {
             
-                         temp1 = sum1
+            temp1 = sum1
             temp2 = 0
             //rulst1.text = temp1.description
             
@@ -249,15 +249,27 @@ class ViewController: UIViewController {
        
         
         verify = true
+        while verify {
+            sum1 = temp1 / temp2
+            if temp2 == 0{
+                
+                temp2 = 1
+            }
+            else {
+                break
+            }
+        }
+       
         if sum1 != 0 {
             judge = -1
+            
         }
         if judge == -1 {
-            if temp2 == 0 {
-                rulst1.text = "chuzuo"
-                
+            if rulst.text == "0" {
+                rulst1.text = "出错"
+                return
             }
-            sum1 = temp1 / temp2
+            
             temp1 = sum1
             temp2 = 0
             
