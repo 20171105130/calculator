@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var judge:Double = 0
     var judge1 = 0
     var verify: Bool = false
+    var minus1:Double = 0
     var decimalPointFlag: Bool = false
     var decimalPointFlag1: Bool = false
     
@@ -370,6 +371,13 @@ class ViewController: UIViewController {
         //sum1  = pow(temp1 , temp2)
         //decimalPointFlag = !decimalPointFlag
         verify = true
+    }
+    
+    @IBAction func minus(_ sender: Any) {
+        sym = -8
+        minus1 = NSString(string: rulst.text!).doubleValue
+        minus1 = minus1 * -1
+        rulst.text = minus1.description
     }
     
 
